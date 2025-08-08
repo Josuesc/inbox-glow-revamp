@@ -19,22 +19,14 @@ const Hero = () => {
         <div className="max-w-5xl mx-auto text-center">
           {/* Main Headline */}
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-light mb-8 animate-fade-in">
-            <span className="text-foreground">We Help </span>
-            <span className="text-primary font-medium">7-Figure Ecom Brands</span>
-            <span className="text-foreground"> Scale Their Profits</span>
+            <span className="text-foreground">Helping </span>
+            <span className="text-primary font-medium">7 & 8 Figure DTC Brands</span>
+            <span className="text-foreground"> Scale Through Cold Traffic Copy & Email Marketing</span>
           </h1>
           
-          <h2 className="text-xl md:text-2xl lg:text-3xl font-light mb-6 animate-fade-in text-muted-foreground delay-300">
-            By Predictably Grossing{" "}
-            <span className="text-secondary font-medium">
-              20%-41%
-            </span>{" "}
-            Of Their Monthly Revenue
+          <h2 className="text-lg md:text-xl lg:text-2xl font-light mb-12 animate-fade-in text-muted-foreground delay-300 max-w-4xl mx-auto leading-relaxed">
+            Acquire New Customers <span className="text-secondary font-medium">PROFITABLY</span> Upfront... Then Keep Them Spending For Years (Not Just One Purchase and Done) With Our <span className="text-accent font-medium">'Customer Comeback'</span> Email Marketing System.
           </h2>
-          
-          <h3 className="text-lg md:text-xl lg:text-2xl font-light mb-12 animate-fade-in text-accent delay-500">
-            Just From Email Marketing
-          </h3>
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center animate-scale-in delay-1000">
