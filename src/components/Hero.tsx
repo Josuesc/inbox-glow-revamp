@@ -21,11 +21,14 @@ const Hero = () => {
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-light mb-8 animate-fade-in">
             <span className="text-foreground">Helping </span>
             <span className="text-primary font-medium">7 & 8 Figure DTC Brands</span>
-            <span className="text-foreground"> Scale Through Cold Traffic Copy & Email Marketing</span>
+            <span className="text-foreground"> Scale Through </span>
+            <span className="text-accent font-medium bg-accent/10 px-2 py-1 rounded-lg">Cold Traffic Copy</span>
+            <span className="text-foreground"> & </span>
+            <span className="text-secondary font-medium bg-secondary/10 px-2 py-1 rounded-lg">Email Marketing</span>
           </h1>
           
           <h2 className="text-lg md:text-xl lg:text-2xl font-light mb-12 animate-fade-in text-muted-foreground delay-300 max-w-4xl mx-auto leading-relaxed">
-            Acquire New Customers <span className="text-secondary font-medium">PROFITABLY</span> Upfront... Then Keep Them Spending For Years (Not Just One Purchase and Done) With Our <span className="text-accent font-medium">'Customer Comeback'</span> Email Marketing System.
+            Acquire New Customers <span className="text-secondary font-medium">PROFITABLY</span> Upfront... Then Keep Them Spending For Years (Not Just One Purchase and Done) With Our <span className="text-accent font-medium">'Anti-Playbook'</span> Email Marketing System.
           </h2>
 
           {/* CTA Buttons */}
