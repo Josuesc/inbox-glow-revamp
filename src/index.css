@@ -6,32 +6,32 @@
 
 @layer base {
   :root {
-    /* Brand Colors - Based on e6a0c4, c7cef6, d6a499, 7390c8 */
-    --background: 0 0% 99%;
-    --foreground: 228 15% 20%;
+    /* Wes Anderson Color Palette - Minimalist */
+    --background: 0 0% 98%;
+    --foreground: 228 15% 25%;
 
     --card: 0 0% 100%;
-    --card-foreground: 228 15% 20%;
+    --card-foreground: 228 15% 25%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 228 15% 20%;
+    --popover-foreground: 228 15% 25%;
 
-    /* Primary - Blue Purple (#7390c8) */
+    /* Primary - Muted Blue (#7390c8) */
     --primary: 228 50% 62%;
     --primary-foreground: 0 0% 100%;
-    --primary-glow: 228 60% 75%;
+    --primary-glow: 228 50% 70%;
 
     /* Secondary - Soft Pink (#e6a0c4) */
     --secondary: 331 48% 77%;
-    --secondary-foreground: 228 15% 20%;
+    --secondary-foreground: 0 0% 100%;
 
     /* Muted - Light Lavender (#c7cef6) */
     --muted: 235 80% 88%;
-    --muted-foreground: 228 15% 45%;
+    --muted-foreground: 228 15% 40%;
 
     /* Accent - Warm Peach (#d6a499) */
     --accent: 15 36% 72%;
-    --accent-foreground: 228 15% 20%;
+    --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
