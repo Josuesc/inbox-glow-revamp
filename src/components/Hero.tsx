@@ -22,7 +22,9 @@ const Hero = () => {
             <span className="text-foreground">Helping </span>
             <span className="text-primary font-medium">7 & 8 Figure DTC Brands</span>
             <span className="text-foreground"> Scale Through </span>
-            <span className="text-foreground underline decoration-1 underline-offset-4">Cold Traffic Copy & Email Marketing</span>
+            <span className="text-foreground italic underline decoration-1 underline-offset-4">Cold Traffic Copy</span>
+            <span className="text-foreground"> & </span>
+            <span className="text-foreground italic underline decoration-1 underline-offset-4">Email Marketing</span>
           </h1>
           
           <h2 className="text-lg md:text-xl lg:text-2xl font-light mb-12 animate-fade-in text-muted-foreground delay-300 max-w-4xl mx-auto leading-relaxed">
