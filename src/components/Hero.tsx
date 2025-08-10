@@ -31,23 +31,15 @@ const Hero = () => {
             Acquire New Customers <span className="text-secondary font-medium">PROFITABLY</span> Upfront... Then Keep Them Spending (Not Just One Purchase and Done) With Our <span className="text-accent font-medium">'Anti-Playbook'</span> Email Marketing&nbsp;System.
           </h2>
 
-          {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-6 justify-center items-center animate-scale-in delay-1000">
+          {/* CTA Button */}
+          <div className="flex justify-center animate-scale-in delay-1000">
             <Button 
               size="lg"
               onClick={() => scrollToSection('contact')}
               className="bg-primary text-primary-foreground hover:bg-primary/90 text-lg px-12 py-4 h-auto font-light border-0"
             >
-              Contact Us
+              Apply For Your Free Audit
               <ArrowRight className="ml-2 w-5 h-5" />
-            </Button>
-            <Button 
-              size="lg"
-              variant="outline"
-              onClick={() => scrollToSection('process')}
-              className="border-2 border-accent text-accent hover:bg-accent hover:text-accent-foreground text-lg px-12 py-4 h-auto font-light bg-transparent"
-            >
-              Learn More
             </Button>
           </div>
 
