@@ -20,7 +20,7 @@ const Hero = () => {
           {/* Main Headline */}
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-light mb-8 animate-fade-in">
             <span className="text-foreground">Helping </span>
-            <span className="text-primary font-medium">7 & 8 Figure DTC Brands</span>
+            <span className="text-primary font-medium">DTC Brands</span>
             <span className="text-foreground"> Scale Through </span>
             <span className="text-foreground italic underline decoration-1 underline-offset-4">Cold Traffic Copy</span>
             <span className="text-foreground"> & </span>
