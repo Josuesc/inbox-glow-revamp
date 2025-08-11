@@ -17,7 +17,7 @@ const Hero = () => {
       <div className="container mx-auto px-4 lg:px-8 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-center max-w-7xl mx-auto">
           {/* Left Column - Text Content (2/3 width) */}
-          <div className="lg:col-span-2 text-left pr-8">
+          <div className="lg:col-span-2 text-left pr-16">
             {/* Main Headline */}
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-light mb-8 animate-fade-in leading-tight">
               <span className="text-foreground">Helping </span>
@@ -28,7 +28,7 @@ const Hero = () => {
               <span className="text-foreground italic underline decoration-1 underline-offset-4">Email Marketing</span>
             </h1>
             
-            <h2 className="text-lg md:text-xl lg:text-2xl font-light mb-12 animate-fade-in text-muted-foreground delay-300 leading-relaxed max-w-2xl">
+            <h2 className="text-lg md:text-xl lg:text-2xl font-light mb-12 animate-fade-in text-muted-foreground delay-300 leading-relaxed max-w-xl">
               Acquire New Customers <span className="text-secondary font-medium">PROFITABLY</span> Upfront... Then Keep Them Spending (Not Just One Purchase and Done) With Our <span className="text-accent font-medium">'Anti-Playbook'</span> Email Marketing&nbsp;System.
             </h2>
 
