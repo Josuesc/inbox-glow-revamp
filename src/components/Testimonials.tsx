@@ -96,17 +96,6 @@ const Testimonials = () => {
           ))}
         </div>
 
-        {/* Trust Indicators */}
-        <div className="mt-16 text-center">
-          <p className="text-xl text-muted-foreground mb-8">
-            Trusted by 7-figure ecommerce brands worldwide
-          </p>
-          <div className="flex justify-center items-center space-x-8 opacity-60">
-            <div className="text-2xl font-bold">10+ Brands</div>
-            <div className="w-px h-8 bg-border"></div>
-            <div className="text-2xl font-bold">$1M+ Generated</div>
-          </div>
-        </div>
       </div>
     </section>
   );
