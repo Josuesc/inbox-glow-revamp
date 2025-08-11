@@ -105,8 +105,6 @@ const Testimonials = () => {
             <div className="text-2xl font-bold">10+ Brands</div>
             <div className="w-px h-8 bg-border"></div>
             <div className="text-2xl font-bold">$1M+ Generated</div>
-            <div className="w-px h-8 bg-border"></div>
-            <div className="text-2xl font-bold">90 Days Average</div>
           </div>
         </div>
       </div>

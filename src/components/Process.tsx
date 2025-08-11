@@ -58,7 +58,7 @@ const Process = () => {
             Of Our Clients' Monthly Revenue
           </h2>
           <p className="text-xl text-muted-foreground mb-4">
-            Just From Email Marketing—In 90 Days Or Less
+            Just From Email Marketing
           </p>
           <div className="w-24 h-1 bg-gradient-to-r from-primary to-secondary mx-auto rounded-full"></div>
         </div>
