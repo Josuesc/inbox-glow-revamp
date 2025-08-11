@@ -11,7 +11,7 @@ const processSteps = [
   {
     icon: Users,
     title: "List Segmentation",
-    description: "Segment lists into 6 key categories, based on: engagement level, buying frequency, and spending level.",
+    description: "Segment lists into key categories, based on: engagement level, buying frequency, and spending level.",
     step: "02"
   },
   {
