@@ -37,22 +37,16 @@ const Header = () => {
               Our Process
             </button>
             <button 
-              onClick={() => scrollToSection('work')}
+              onClick={() => scrollToSection('services')}
               className="text-foreground hover:text-primary transition-colors"
             >
-              Our Work
-            </button>
-            <button 
-              onClick={() => scrollToSection('cases')}
-              className="text-foreground hover:text-primary transition-colors"
-            >
-              Cases
+              Our Services
             </button>
             <Button 
               onClick={() => scrollToSection('contact')}
               className="shadow-glow hover:shadow-primary/30"
             >
-              Contact Us
+              Apply For Your Free Audit
             </Button>
           </nav>
 
@@ -82,22 +76,16 @@ const Header = () => {
                 Our Process
               </button>
               <button 
-                onClick={() => scrollToSection('work')}
+                onClick={() => scrollToSection('services')}
                 className="text-left text-foreground hover:text-primary transition-colors"
               >
-                Our Work
-              </button>
-              <button 
-                onClick={() => scrollToSection('cases')}
-                className="text-left text-foreground hover:text-primary transition-colors"
-              >
-                Cases
+                Our Services
               </button>
               <Button 
                 onClick={() => scrollToSection('contact')}
                 className="w-full shadow-glow"
               >
-                Contact Us
+                Apply For Your Free Audit
               </Button>
             </nav>
           </div>

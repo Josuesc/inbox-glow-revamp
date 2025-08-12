@@ -53,7 +53,7 @@ const Testimonials = () => {
         {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-black mb-6 text-gradient">
-            Hear what our clients have to say about us
+            Don't Trust Us. Trust Them Instead...
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-primary to-secondary mx-auto rounded-full"></div>
         </div>
