@@ -53,7 +53,15 @@ const Process = () => {
         {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-black mb-6">
-            Our Process Is Simple
+            Our Process To Achieve{" "}
+            <span className="text-gradient">20%-41%</span>{" "}
+            Of Our Clients' Monthly Revenue
+          </h2>
+          <p className="text-xl text-muted-foreground mb-4">
+            Just From Email Marketing
+          </p>
+          <div className="w-24 h-1 bg-gradient-to-r from-primary to-secondary mx-auto rounded-full"></div>
+        </div>
 
         {/* Process Steps */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
