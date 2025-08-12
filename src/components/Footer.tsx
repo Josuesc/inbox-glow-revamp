@@ -15,6 +15,7 @@ const Footer = () => {
           {/* CTA Button */}
           <Button 
             size="lg"
+            onClick={() => window.open('https://forms.gle/Vtb4Q2EZhBxg8iKC7', '_blank')}
             className="bg-secondary hover:bg-secondary/90 text-secondary-foreground font-semibold px-8 py-3 text-lg"
           >
             Apply For Your Free Audit

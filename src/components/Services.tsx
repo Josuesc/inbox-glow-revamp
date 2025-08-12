@@ -71,10 +71,7 @@ const Services = () => {
 
             {/* CTA */}
             <button 
-              onClick={() => {
-                const element = document.getElementById('contact');
-                if (element) element.scrollIntoView({ behavior: 'smooth' });
-              }}
+              onClick={() => window.open('https://forms.gle/Vtb4Q2EZhBxg8iKC7', '_blank')}
               className="w-full bg-gradient-to-r from-primary to-secondary text-white px-6 py-3 rounded-full font-semibold hover:shadow-glow transition-all duration-300 hover:scale-105"
             >
               Apply For Your Free Audit
@@ -115,10 +112,7 @@ const Services = () => {
 
             {/* CTA */}
             <button 
-              onClick={() => {
-                const element = document.getElementById('contact');
-                if (element) element.scrollIntoView({ behavior: 'smooth' });
-              }}
+              onClick={() => window.open('https://forms.gle/Vtb4Q2EZhBxg8iKC7', '_blank')}
               className="w-full bg-gradient-to-r from-primary to-secondary text-white px-6 py-3 rounded-full font-semibold hover:shadow-glow transition-all duration-300 hover:scale-105"
             >
               Apply For Your Free Audit

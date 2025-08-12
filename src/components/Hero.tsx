@@ -36,7 +36,7 @@ const Hero = () => {
             <div className="animate-scale-in delay-1000">
               <Button 
                 size="lg"
-                onClick={() => scrollToSection('contact')}
+                onClick={() => window.open('https://forms.gle/Vtb4Q2EZhBxg8iKC7', '_blank')}
                 className="bg-primary text-primary-foreground hover:bg-primary/90 text-xl px-16 py-6 h-auto font-light border-0"
               >
                 Apply For Your Free Audit

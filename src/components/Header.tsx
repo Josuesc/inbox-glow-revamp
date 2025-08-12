@@ -43,7 +43,7 @@ const Header = () => {
               Our Services
             </button>
             <Button 
-              onClick={() => scrollToSection('contact')}
+              onClick={() => window.open('https://forms.gle/Vtb4Q2EZhBxg8iKC7', '_blank')}
               className="shadow-glow hover:shadow-primary/30"
             >
               Apply For Your Free Audit
@@ -82,7 +82,7 @@ const Header = () => {
                 Our Services
               </button>
               <Button 
-                onClick={() => scrollToSection('contact')}
+                onClick={() => window.open('https://forms.gle/Vtb4Q2EZhBxg8iKC7', '_blank')}
                 className="w-full shadow-glow"
               >
                 Apply For Your Free Audit

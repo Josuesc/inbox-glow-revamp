@@ -106,10 +106,7 @@ const Process = () => {
         {/* CTA */}
         <div className="text-center mt-16">
           <button 
-            onClick={() => {
-              const element = document.getElementById('contact');
-              if (element) element.scrollIntoView({ behavior: 'smooth' });
-            }}
+            onClick={() => window.open('https://forms.gle/Vtb4Q2EZhBxg8iKC7', '_blank')}
             className="bg-gradient-to-r from-primary to-secondary text-white px-8 py-4 rounded-full font-semibold hover:shadow-glow transition-all duration-300 hover:scale-105"
           >
             Apply For Your Free Audit
