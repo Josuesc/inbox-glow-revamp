@@ -94,7 +94,7 @@ const Services = () => {
             <ul className="space-y-3 mb-8">
               <li className="text-muted-foreground flex items-start">
                 <div className="w-2 h-2 bg-primary rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                X/Twitter Ads (Creatives & Management)
+                X/Twitter Ads (Creatives + Campaign Management)
               </li>
               <li className="text-muted-foreground flex items-start">
                 <div className="w-2 h-2 bg-primary rounded-full mt-2 mr-3 flex-shrink-0"></div>
