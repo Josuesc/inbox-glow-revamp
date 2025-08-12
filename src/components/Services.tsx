@@ -87,26 +87,26 @@ const Services = () => {
 
             {/* Title */}
             <h3 className="text-2xl font-bold mb-6 text-foreground">
-              Cold Traffic copy/Funnels
+              Cold Traffic Copy/Funnels
             </h3>
 
             {/* Services List */}
             <ul className="space-y-3 mb-8">
               <li className="text-muted-foreground flex items-start">
                 <div className="w-2 h-2 bg-primary rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                X/Twitter Ads
+                X/Twitter Ads (Creatives & Management)
               </li>
               <li className="text-muted-foreground flex items-start">
                 <div className="w-2 h-2 bg-primary rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                Advertorials
+                Advertorials (Copy Only)
               </li>
               <li className="text-muted-foreground flex items-start">
                 <div className="w-2 h-2 bg-primary rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                VSLs
+                VSLs (Copy Only)
               </li>
               <li className="text-muted-foreground flex items-start">
                 <div className="w-2 h-2 bg-primary rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                Sales Pages
+                Sales Pages (Copy Only)
               </li>
             </ul>
 
