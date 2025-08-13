@@ -102,7 +102,7 @@ const Services = () => {
               </li>
               <li className="text-muted-foreground flex items-start">
                 <div className="w-2 h-2 bg-primary rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                VSLs (Copy Only)
+                Video & Text Sales Letters (Copy Only)
               </li>
               <li className="text-muted-foreground flex items-start">
                 <div className="w-2 h-2 bg-primary rounded-full mt-2 mr-3 flex-shrink-0"></div>
