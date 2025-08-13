@@ -5,13 +5,13 @@ const testimonials = [
   {
     name: "Eduardo Neves & Mariana Rabelo",
     title: "Owners of Embuarama Craft Beer",
-    content: "Man, you're a genius! Working with you guys brought me security, tranquility, and confidence that I was on the right path. Most importantly: you brought me RESULTS!",
+    content: "Man, you're a genius! Working with you guys brought us security, tranquility, and confidence that we were on the right path. Most importantly: you brought us RESULTS!",
     rating: 5,
     image: "/lovable-uploads/ae6b6cf1-bbcb-4564-beac-641756d115e5.png"
   },
   {
     name: "Matt Lloyd",
-    title: "Owner of International Insiders",
+    title: "Owner of Moving To Costa Rica",
     content: "Over the past decade, I have invested several hundred thousand dollars into copy. Over that period of time, there were just a few copywriters I consistently went back to. JC is one of the rare ones, where I'd bring him an offer, and we were able to craft compelling copy every single time.",
     rating: 5,
     image: "/lovable-uploads/9ed4b69d-e9bf-4445-aa1b-373453ba86d9.png"
@@ -19,7 +19,7 @@ const testimonials = [
   {
     name: "Lisa Ormenyessy",
     title: "Owner of OMGhee",
-    content: "Working with Inbox Cash Flow was a breeze. Often when you hire consultants it's a frustrating process with the transfer of knowledge required for good copy, but JC did his research and just 'got it'. I'm already seeing results in my account.",
+    content: "Working with JC was a breeze. Often when you hire consultants it's a frustrating process with the transfer of knowledge required for good copy, but JC did his research and just 'got it'. I'm already seeing results in my account.",
     rating: 5,
     image: "/lovable-uploads/56e57e3d-0ad4-4f15-9b0b-8520ba92303c.png"
   },
