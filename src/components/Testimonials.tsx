@@ -3,18 +3,18 @@ import { Star, Quote } from "lucide-react";
 
 const testimonials = [
   {
-    name: "Eduardo Neves & Mariana Rabelo",
-    title: "Owners of Embuarama Craft Beer",
-    content: "Man, you're a genius! Working with you guys brought us security, tranquility, and confidence that we were on the right path. Most importantly: you brought us RESULTS!",
-    rating: 5,
-    image: "/lovable-uploads/ae6b6cf1-bbcb-4564-beac-641756d115e5.png"
-  },
-  {
     name: "Matt Lloyd",
     title: "Owner of Moving To Costa Rica",
     content: "Over the past decade, I have invested several hundred thousand dollars into copy. Over that period of time, there were just a few copywriters I consistently went back to. JC is one of the rare ones, where I'd bring him an offer, and we were able to craft compelling copy every single time.",
     rating: 5,
     image: "/lovable-uploads/9ed4b69d-e9bf-4445-aa1b-373453ba86d9.png"
+  },
+  {
+    name: "Fernando Ziemmer",
+    title: "Owner of GenioDesk",
+    content: "My favorite parts about working with Inbox Cash Flow: Creativity, Punctuality, Reliability, Methodology, Results.",
+    rating: 5,
+    image: "/lovable-uploads/5638bf3b-4f5c-4c6b-a353-d4bd441bdd2b.png"
   },
   {
     name: "Lisa Ormenyessy",
@@ -24,18 +24,18 @@ const testimonials = [
     image: "/lovable-uploads/56e57e3d-0ad4-4f15-9b0b-8520ba92303c.png"
   },
   {
+    name: "Eduardo Neves & Mariana Rabelo",
+    title: "Owners of Embuarama Craft Beer",
+    content: "Man, you're a genius! Working with you guys brought us security, tranquility, and confidence that we were on the right path. Most importantly: you brought us RESULTS!",
+    rating: 5,
+    image: "/lovable-uploads/ae6b6cf1-bbcb-4564-beac-641756d115e5.png"
+  },
+  {
     name: "Sanmeet Walia",
     title: "Owner of DataVinci",
     content: "Anything but a disappointment. Their professional and efficient work style, knowledge, and experience in email marketing (especially JC's) make them an asset to any brand.",
     rating: 5,
     image: "/lovable-uploads/456823e5-d575-40b2-aba6-f4969a11cc65.png"
-  },
-  {
-    name: "Fernando Ziemmer",
-    title: "Owner of GenioDesk",
-    content: "My favorite parts about working with Inbox Cash Flow: Creativity, Punctuality, Reliability, Methodology, Results.",
-    rating: 5,
-    image: "/lovable-uploads/5638bf3b-4f5c-4c6b-a353-d4bd441bdd2b.png"
   },
   {
     name: "Victor Abreu",
