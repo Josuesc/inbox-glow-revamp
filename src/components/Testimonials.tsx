@@ -17,11 +17,11 @@ const testimonials = [
     image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face"
   },
   {
-    name: "Aakash Gandhi",
-    title: "Owner of Workik",
-    content: "JC has a very methodical approach to his work. He calmly listens, understands, and suggests high-value pointers. Communication is top-notch.",
+    name: "Lisa Ormenyessy",
+    title: "Owner of OMGhee",
+    content: "Working with JC was a breeze. Often when you hire consultants it's a frustrating process with the transfer of knowledge required for good copy, but JC did his research and just 'got it'. I'm already seeing results in my account.",
     rating: 5,
-    image: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=150&h=150&fit=crop&crop=face"
+    image: "/lovable-uploads/56e57e3d-0ad4-4f15-9b0b-8520ba92303c.png"
   },
   {
     name: "Sanmeet Walia",
