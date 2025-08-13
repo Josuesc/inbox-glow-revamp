@@ -7,14 +7,14 @@ const testimonials = [
     title: "Owners of Embuarama Craft Beer",
     content: "Man, you're a genius! Working with you guys brought me security, tranquility, and confidence that I was on the right path. Most importantly: you brought me RESULTS!",
     rating: 5,
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face"
+    image: "/lovable-uploads/ae6b6cf1-bbcb-4564-beac-641756d115e5.png"
   },
   {
     name: "Matt Lloyd",
     title: "Owner of International Insiders",
     content: "Over the past decade, I have invested several hundred thousand dollars into copy. Over that period of time, there were just a few copywriters I consistently went back to. JC is one of the rare ones, where I'd bring him an offer, and we were able to craft compelling copy every single time.",
     rating: 5,
-    image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face"
+    image: "/lovable-uploads/5638bf3b-4f5c-4c6b-a353-d4bd441bdd2b.png"
   },
   {
     name: "Lisa Ormenyessy",
@@ -28,21 +28,21 @@ const testimonials = [
     title: "Owner of DataVinci",
     content: "Anything but a disappointment. Their professional and efficient work style, knowledge, and experience in email marketing (especially JC's) make them an asset to any brand.",
     rating: 5,
-    image: "https://images.unsplash.com/photo-1519345182560-3f2917c472ef?w=150&h=150&fit=crop&crop=face"
+    image: "/lovable-uploads/456823e5-d575-40b2-aba6-f4969a11cc65.png"
   },
   {
     name: "Fernando Ziemmer",
     title: "Owner of GenioDesk",
     content: "My favorite parts about working with Inbox Cash Flow: Creativity, Punctuality, Reliability, Methodology, Results.",
     rating: 5,
-    image: "https://images.unsplash.com/photo-1494790108755-2616b612b129?w=150&h=150&fit=crop&crop=face"
+    image: "/lovable-uploads/9ed4b69d-e9bf-4445-aa1b-373453ba86d9.png"
   },
   {
     name: "Victor Abreu",
     title: "Owner of VC Institute",
     content: "Surprisingly entertaining and persuasive sales letter. J.C. and his team delivered it in only 10 days! And their copy converted more sales than my previous one.",
     rating: 5,
-    image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&h=150&fit=crop&crop=face"
+    image: "/lovable-uploads/2348a6d8-938e-415e-b162-921a36798bd4.png"
   }
 ];
 
