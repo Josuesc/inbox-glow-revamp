@@ -11,7 +11,7 @@ const testimonials = [
   },
   {
     name: "Matt Lloyd",
-    title: "Owner of movingtocostarica.com",
+    title: "Owner of International Insiders",
     content: "Over the past decade, I have invested several hundred thousand dollars into copy. Over that period of time, there were just a few copywriters I consistently went back to. JC is one of the rare ones, where I'd bring him an offer, and we were able to craft compelling copy every single time.",
     rating: 5,
     image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face"
@@ -19,28 +19,28 @@ const testimonials = [
   {
     name: "Lisa Ormenyessy",
     title: "Owner of OMGhee",
-    content: "Working with them was a breeze. Often when you hire consultants it's a frustrating process with the transfer of knowledge required for good copy, but JC did his research and just 'got it'. I'm already seeing results in my account.",
+    content: "Working with Inbox Cash Flow was a breeze. Often when you hire consultants it's a frustrating process with the transfer of knowledge required for good copy, but JC did his research and just 'got it'. I'm already seeing results in my account.",
     rating: 5,
     image: "/lovable-uploads/56e57e3d-0ad4-4f15-9b0b-8520ba92303c.png"
   },
   {
     name: "Sanmeet Walia",
     title: "Owner of DataVinci",
-    content: "JC is anything but a disappointment. His professional and efficient work style, knowledge, and experience in email marketing make him an asset to any team.",
+    content: "Anything but a disappointment. Their professional and efficient work style, knowledge, and experience in email marketing (especially JC's) make them an asset to any brand.",
     rating: 5,
     image: "https://images.unsplash.com/photo-1519345182560-3f2917c472ef?w=150&h=150&fit=crop&crop=face"
   },
   {
     name: "Fernando Ziemmer",
     title: "Owner of GenioDesk",
-    content: "My favorite parts about working with them: Creativity, Punctuality, Reliability, Methodology, Results.",
+    content: "My favorite parts about working with Inbox Cash Flow: Creativity, Punctuality, Reliability, Methodology, Results.",
     rating: 5,
     image: "https://images.unsplash.com/photo-1494790108755-2616b612b129?w=150&h=150&fit=crop&crop=face"
   },
   {
     name: "Victor Abreu",
     title: "Owner of VC Institute",
-    content: "Surprisingly entertaining and persuasive sales letter — J.C. and his team delivered it in only 10 days! Their copy converted more sales than my previous one.",
+    content: "Surprisingly entertaining and persuasive sales letter. J.C. and his team delivered it in only 10 days! And their copy converted more sales than my previous one.",
     rating: 5,
     image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&h=150&fit=crop&crop=face"
   }
