@@ -14,7 +14,7 @@ const testimonials = [
     title: "Owner of International Insiders",
     content: "Over the past decade, I have invested several hundred thousand dollars into copy. Over that period of time, there were just a few copywriters I consistently went back to. JC is one of the rare ones, where I'd bring him an offer, and we were able to craft compelling copy every single time.",
     rating: 5,
-    image: "/lovable-uploads/5638bf3b-4f5c-4c6b-a353-d4bd441bdd2b.png"
+    image: "/lovable-uploads/9ed4b69d-e9bf-4445-aa1b-373453ba86d9.png"
   },
   {
     name: "Lisa Ormenyessy",
@@ -35,7 +35,7 @@ const testimonials = [
     title: "Owner of GenioDesk",
     content: "My favorite parts about working with Inbox Cash Flow: Creativity, Punctuality, Reliability, Methodology, Results.",
     rating: 5,
-    image: "/lovable-uploads/9ed4b69d-e9bf-4445-aa1b-373453ba86d9.png"
+    image: "/lovable-uploads/5638bf3b-4f5c-4c6b-a353-d4bd441bdd2b.png"
   },
   {
     name: "Victor Abreu",
