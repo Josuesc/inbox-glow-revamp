@@ -17,11 +17,11 @@ const testimonials = [
     image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face"
   },
   {
-    name: "Mariana Rabelo",
-    title: "Owner of Embu Consulting",
-    content: "Man, you're a genius! I really want to keep you on my team. I have no doubt that we can make a lot of money together.",
+    name: "Aakash Gandhi",
+    title: "Owner of Workik",
+    content: "JC has a very methodical approach to his work. He calmly listens, understands, and suggests high-value pointers. Communication is top-notch.",
     rating: 5,
-    image: "https://images.unsplash.com/photo-1494790108755-2616b612b129?w=150&h=150&fit=crop&crop=face"
+    image: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=150&h=150&fit=crop&crop=face"
   },
   {
     name: "Sanmeet Walia",
@@ -31,11 +31,11 @@ const testimonials = [
     image: "https://images.unsplash.com/photo-1519345182560-3f2917c472ef?w=150&h=150&fit=crop&crop=face"
   },
   {
-    name: "Aakash Gandhi",
-    title: "Owner of Workik",
-    content: "JC has a very methodical approach to his work. He calmly listens, understands, and suggests high-value pointers. Communication is top-notch.",
+    name: "Mariana Rabelo",
+    title: "Owner of Embu Consulting",
+    content: "Man, you're a genius! I really want to keep you on my team. I have no doubt that we can make a lot of money together.",
     rating: 5,
-    image: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=150&h=150&fit=crop&crop=face"
+    image: "https://images.unsplash.com/photo-1494790108755-2616b612b129?w=150&h=150&fit=crop&crop=face"
   },
   {
     name: "Victor Abreu",
