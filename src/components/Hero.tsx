@@ -18,38 +18,60 @@ const Hero = () => {
     plainText: [
       "/lovable-uploads/34389f9a-3ca5-41e5-83f8-a1e3ac0f2deb.png", // BEDJET
       "/lovable-uploads/cdd9a44c-8aa4-4a90-b974-6dfe4911ab4c.png", // NB Pure
-      "/lovable-uploads/0f9e15be-b7d1-4e7e-af3d-48aa3434019c.png"  // Northern Fir
+      "/lovable-uploads/0f9e15be-b7d1-4e7e-af3d-48aa3434019c.png", // Northern Fir
+      "/lovable-uploads/3a01ab99-d23f-41bd-a815-0bab6c9dfda2.png", // IOKA Eye Care
+      "/lovable-uploads/c4a143a4-2f5c-48f4-bb1c-f1eadfddc878.png", // SBTRCT Skincare
+      "/lovable-uploads/97b63913-15bc-408f-adb0-8b89835ea177.png"  // Terra & Co
     ]
   };
 
-  // State for cycling images
+  // State for cycling images with staggered timing
   const [currentDesignedIndex, setCurrentDesignedIndex] = useState(0);
   const [currentPlainIndex, setCurrentPlainIndex] = useState(0);
   const [showDesigned, setShowDesigned] = useState(true);
+  const [leftPhoneIndex, setLeftPhoneIndex] = useState(2);
+  const [rightPhoneIndex, setRightPhoneIndex] = useState(4);
 
-  // Cycle through designed emails
+  // Main designed emails cycle - faster for more dynamic feel
   useEffect(() => {
     const designedInterval = setInterval(() => {
       setCurrentDesignedIndex((prev) => (prev + 1) % portfolioImages.designed.length);
-    }, 2500);
+    }, 1800); // Faster cycling
     return () => clearInterval(designedInterval);
   }, []);
 
-  // Cycle through plain text emails
+  // Plain text emails cycle - offset timing 
   useEffect(() => {
     const plainInterval = setInterval(() => {
       setCurrentPlainIndex((prev) => (prev + 1) % portfolioImages.plainText.length);
-    }, 3000);
+    }, 2100); // Different timing to avoid sync
     return () => clearInterval(plainInterval);
   }, []);
 
-  // Toggle between designed and plain text view
+  // Toggle between designed and plain text - faster transitions
   useEffect(() => {
     const toggleInterval = setInterval(() => {
       setShowDesigned((prev) => !prev);
-    }, 4000);
+    }, 2800); // Faster toggle for more dynamic portfolio showcase
     return () => clearInterval(toggleInterval);
   }, []);
+
+  // Left phone independent cycling - staggered to avoid simultaneous changes
+  useEffect(() => {
+    const leftInterval = setInterval(() => {
+      setLeftPhoneIndex((prev) => (prev + 1) % portfolioImages.designed.length);
+    }, 2200); // Unique timing
+    return () => clearInterval(leftInterval);
+  }, []);
+
+  // Right phone independent cycling - different offset
+  useEffect(() => {
+    const rightInterval = setInterval(() => {
+      setRightPhoneIndex((prev) => (prev + 1) % 
+        (showDesigned ? portfolioImages.designed.length : portfolioImages.plainText.length));
+    }, 2600); // Another unique timing
+    return () => clearInterval(rightInterval);
+  }, [showDesigned]);
 
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
@@ -105,7 +127,7 @@ const Hero = () => {
                     </div>
                     <div className="h-full bg-white relative overflow-hidden">
                       {/* Designed Email Display */}
-                      <div className={`absolute inset-0 transition-opacity duration-1000 ${showDesigned ? 'opacity-100' : 'opacity-0'}`}>
+                      <div className={`absolute inset-0 transition-opacity duration-700 ${showDesigned ? 'opacity-100' : 'opacity-0'}`}>
                         <img 
                           src={portfolioImages.designed[currentDesignedIndex]}
                           alt="Professional designed email"
@@ -117,7 +139,7 @@ const Hero = () => {
                       </div>
                       
                       {/* Plain Text Email Display */}
-                      <div className={`absolute inset-0 transition-opacity duration-1000 ${!showDesigned ? 'opacity-100' : 'opacity-0'}`}>
+                      <div className={`absolute inset-0 transition-opacity duration-700 ${!showDesigned ? 'opacity-100' : 'opacity-0'}`}>
                         <img 
                           src={portfolioImages.plainText[currentPlainIndex]}
                           alt="High-converting plain text email"
@@ -132,16 +154,16 @@ const Hero = () => {
                 </div>
               </div>
 
-              {/* Phone 2 - Left (Secondary Portfolio) */}
+              {/* Phone 2 - Left (Independent Portfolio Cycling) */}
               <div className="absolute -left-12 z-20 animate-[float_6s_ease-in-out_infinite_1s]">
                 <div className="w-40 h-[320px] bg-gradient-to-b from-slate-700 to-slate-800 rounded-[1.5rem] p-1.5 shadow-xl transform rotate-12">
                   <div className="w-full h-full bg-white rounded-[1rem] overflow-hidden relative">
                     <div className="w-full h-5 bg-black rounded-t-[1rem]"></div>
                     <div className="h-full bg-white relative overflow-hidden">
                       <img 
-                        src={portfolioImages.designed[(currentDesignedIndex + 2) % portfolioImages.designed.length]}
+                        src={portfolioImages.designed[leftPhoneIndex]}
                         alt="Email marketing portfolio"
-                        className="w-full h-full object-cover object-top transition-all duration-1000"
+                        className="w-full h-full object-cover object-top transition-all duration-600"
                       />
                       <div className="absolute bottom-1 left-1 bg-accent/80 text-white text-[6px] px-1 py-0.5 rounded font-medium">
                         PORTFOLIO
@@ -151,7 +173,7 @@ const Hero = () => {
                 </div>
               </div>
 
-              {/* Phone 3 - Right (Tertiary Portfolio) */}
+              {/* Phone 3 - Right (Mixed Portfolio with Independent Timing) */}
               <div className="absolute -right-12 z-20 animate-[float_6s_ease-in-out_infinite_2s]">
                 <div className="w-40 h-[320px] bg-gradient-to-b from-slate-700 to-slate-800 rounded-[1.5rem] p-1.5 shadow-xl transform -rotate-12">
                   <div className="w-full h-full bg-white rounded-[1rem] overflow-hidden relative">
@@ -159,11 +181,11 @@ const Hero = () => {
                     <div className="h-full bg-white relative overflow-hidden">
                       <img 
                         src={showDesigned ? 
-                          portfolioImages.designed[(currentDesignedIndex + 4) % portfolioImages.designed.length] :
-                          portfolioImages.plainText[(currentPlainIndex + 1) % portfolioImages.plainText.length]
+                          portfolioImages.designed[rightPhoneIndex % portfolioImages.designed.length] :
+                          portfolioImages.plainText[rightPhoneIndex % portfolioImages.plainText.length]
                         }
                         alt="Email marketing showcase"
-                        className="w-full h-full object-cover object-top transition-all duration-1000"
+                        className="w-full h-full object-cover object-top transition-all duration-600"
                       />
                       <div className="absolute bottom-1 right-1 bg-muted-foreground/80 text-white text-[6px] px-1 py-0.5 rounded font-medium">
                         RESULTS
