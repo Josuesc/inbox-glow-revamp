@@ -57,7 +57,7 @@ const Hero = () => {
                     </div>
                     <div className="h-full bg-black flex items-center justify-center overflow-hidden">
                       <img 
-                        src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExNjJncWt3dXU4NHI5dm9mbWl1ODQxZmg0NWh2eHN2NzlvbXh1d3pzNiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/exwJuxCcMu3u51mDNi/giphy.gif" 
+                        src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExZzZqcm13azFpN3c4dWJyNzdmcjI3NWpmY3QwMno4bG1ncjhmdjZ6dCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/4E1EVKLCSWbkwZPtRQ/giphy.gif" 
                         alt="Email marketing animation"
                         className="w-full h-full object-cover"
                       />
