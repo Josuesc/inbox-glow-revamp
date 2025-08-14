@@ -1,8 +1,56 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Mail, TrendingUp } from "lucide-react";
 import heroImage from "@/assets/hero-bg.jpg";
+import { useState, useEffect } from "react";
 
 const Hero = () => {
+  // Portfolio images for the smartphone mockups
+  const portfolioImages = {
+    designed: [
+      "/lovable-uploads/9e9e9113-ab3b-4ae3-9c5f-c625939eb71c.png", // IOKA skincare 1
+      "/lovable-uploads/cbcb37cf-8cc7-4740-9f5d-7ce2c9378bd1.png", // IOKA skincare 2
+      "/lovable-uploads/a982e324-4b12-46cf-9713-e2444ef19667.png", // JYM supplement 1
+      "/lovable-uploads/bbb00f58-a653-4d38-ab02-0632a651310d.png", // JYM supplement 2
+      "/lovable-uploads/1b09f454-388f-4fd4-a0cf-1adc1fce40f0.png", // WRAP LIFE 1
+      "/lovable-uploads/fb68086e-5820-4b6d-81d9-5f04df5d72f1.png", // WRAP LIFE 2
+      "/lovable-uploads/78b53fcb-608b-4b6c-8a0f-397af1a78152.png"  // WRAP LIFE 3
+    ],
+    plainText: [
+      "/lovable-uploads/34389f9a-3ca5-41e5-83f8-a1e3ac0f2deb.png", // BEDJET
+      "/lovable-uploads/cdd9a44c-8aa4-4a90-b974-6dfe4911ab4c.png", // NB Pure
+      "/lovable-uploads/0f9e15be-b7d1-4e7e-af3d-48aa3434019c.png"  // Northern Fir
+    ]
+  };
+
+  // State for cycling images
+  const [currentDesignedIndex, setCurrentDesignedIndex] = useState(0);
+  const [currentPlainIndex, setCurrentPlainIndex] = useState(0);
+  const [showDesigned, setShowDesigned] = useState(true);
+
+  // Cycle through designed emails
+  useEffect(() => {
+    const designedInterval = setInterval(() => {
+      setCurrentDesignedIndex((prev) => (prev + 1) % portfolioImages.designed.length);
+    }, 2500);
+    return () => clearInterval(designedInterval);
+  }, []);
+
+  // Cycle through plain text emails
+  useEffect(() => {
+    const plainInterval = setInterval(() => {
+      setCurrentPlainIndex((prev) => (prev + 1) % portfolioImages.plainText.length);
+    }, 3000);
+    return () => clearInterval(plainInterval);
+  }, []);
+
+  // Toggle between designed and plain text view
+  useEffect(() => {
+    const toggleInterval = setInterval(() => {
+      setShowDesigned((prev) => !prev);
+    }, 4000);
+    return () => clearInterval(toggleInterval);
+  }, []);
+
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
@@ -48,52 +96,77 @@ const Hero = () => {
           {/* Right Column - Animated Smartphone Mockups (1/3 width) */}
           <div className="lg:col-span-1 relative flex justify-center items-center animate-fade-in delay-500">
             <div className="relative w-full h-[500px] flex items-center justify-center">
-              {/* Phone 1 - Front Center */}
+              {/* Phone 1 - Center (Main Portfolio) */}
               <div className="absolute z-30 animate-[float_6s_ease-in-out_infinite]">
                 <div className="w-48 h-[380px] bg-gradient-to-b from-slate-800 to-slate-900 rounded-[2rem] p-2 shadow-2xl">
-                  <div className="w-full h-full bg-white rounded-[1.5rem] overflow-hidden">
+                  <div className="w-full h-full bg-white rounded-[1.5rem] overflow-hidden relative">
                     <div className="w-full h-6 bg-black rounded-t-[1.5rem] flex items-center justify-center">
                       <div className="w-12 h-1 bg-gray-300 rounded-full"></div>
                     </div>
-                    <div className="h-full bg-black flex items-center justify-center overflow-hidden">
-                      <img 
-                        src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExZzZqcm13azFpN3c4dWJyNzdmcjI3NWpmY3QwMno4bG1ncjhmdjZ6dCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/4E1EVKLCSWbkwZPtRQ/giphy.gif" 
-                        alt="Email marketing animation"
-                        className="w-full h-full object-cover"
-                      />
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              {/* Phone 2 - Left Back */}
-              <div className="absolute -left-12 z-20 animate-[float_6s_ease-in-out_infinite_1s]">
-                <div className="w-40 h-[320px] bg-gradient-to-b from-slate-700 to-slate-800 rounded-[1.5rem] p-1.5 shadow-xl transform rotate-12">
-                  <div className="w-full h-full bg-white rounded-[1rem] overflow-hidden">
-                    <div className="w-full h-5 bg-black rounded-t-[1rem]"></div>
-                    <div className="p-2 h-full bg-gradient-to-br from-blue-100 to-indigo-100">
-                      <div className="text-[10px] font-semibold mb-1">Newsletter</div>
-                      <div className="w-full h-12 bg-gradient-to-r from-blue-200 to-indigo-200 rounded mb-1"></div>
-                      <div className="space-y-1">
-                        <div className="h-1 bg-gray-200 rounded"></div>
-                        <div className="h-1 bg-gray-200 rounded w-2/3"></div>
+                    <div className="h-full bg-white relative overflow-hidden">
+                      {/* Designed Email Display */}
+                      <div className={`absolute inset-0 transition-opacity duration-1000 ${showDesigned ? 'opacity-100' : 'opacity-0'}`}>
+                        <img 
+                          src={portfolioImages.designed[currentDesignedIndex]}
+                          alt="Professional designed email"
+                          className="w-full h-full object-cover object-top"
+                        />
+                        <div className="absolute bottom-2 left-2 bg-primary/90 text-white text-[8px] px-2 py-1 rounded-full font-medium">
+                          DESIGNED EMAIL
+                        </div>
+                      </div>
+                      
+                      {/* Plain Text Email Display */}
+                      <div className={`absolute inset-0 transition-opacity duration-1000 ${!showDesigned ? 'opacity-100' : 'opacity-0'}`}>
+                        <img 
+                          src={portfolioImages.plainText[currentPlainIndex]}
+                          alt="High-converting plain text email"
+                          className="w-full h-full object-cover object-top"
+                        />
+                        <div className="absolute bottom-2 left-2 bg-secondary/90 text-white text-[8px] px-2 py-1 rounded-full font-medium">
+                          PLAIN TEXT
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
 
-              {/* Phone 3 - Right Back */}
+              {/* Phone 2 - Left (Secondary Portfolio) */}
+              <div className="absolute -left-12 z-20 animate-[float_6s_ease-in-out_infinite_1s]">
+                <div className="w-40 h-[320px] bg-gradient-to-b from-slate-700 to-slate-800 rounded-[1.5rem] p-1.5 shadow-xl transform rotate-12">
+                  <div className="w-full h-full bg-white rounded-[1rem] overflow-hidden relative">
+                    <div className="w-full h-5 bg-black rounded-t-[1rem]"></div>
+                    <div className="h-full bg-white relative overflow-hidden">
+                      <img 
+                        src={portfolioImages.designed[(currentDesignedIndex + 2) % portfolioImages.designed.length]}
+                        alt="Email marketing portfolio"
+                        className="w-full h-full object-cover object-top transition-all duration-1000"
+                      />
+                      <div className="absolute bottom-1 left-1 bg-accent/80 text-white text-[6px] px-1 py-0.5 rounded font-medium">
+                        PORTFOLIO
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Phone 3 - Right (Tertiary Portfolio) */}
               <div className="absolute -right-12 z-20 animate-[float_6s_ease-in-out_infinite_2s]">
                 <div className="w-40 h-[320px] bg-gradient-to-b from-slate-700 to-slate-800 rounded-[1.5rem] p-1.5 shadow-xl transform -rotate-12">
-                  <div className="w-full h-full bg-white rounded-[1rem] overflow-hidden">
+                  <div className="w-full h-full bg-white rounded-[1rem] overflow-hidden relative">
                     <div className="w-full h-5 bg-black rounded-t-[1rem]"></div>
-                    <div className="p-2 h-full bg-gradient-to-br from-emerald-100 to-teal-100">
-                      <div className="text-[10px] font-semibold mb-1">Promotion</div>
-                      <div className="w-full h-12 bg-gradient-to-r from-emerald-200 to-teal-200 rounded mb-1"></div>
-                      <div className="space-y-1">
-                        <div className="h-1 bg-gray-200 rounded"></div>
-                        <div className="h-1 bg-gray-200 rounded w-3/4"></div>
+                    <div className="h-full bg-white relative overflow-hidden">
+                      <img 
+                        src={showDesigned ? 
+                          portfolioImages.designed[(currentDesignedIndex + 4) % portfolioImages.designed.length] :
+                          portfolioImages.plainText[(currentPlainIndex + 1) % portfolioImages.plainText.length]
+                        }
+                        alt="Email marketing showcase"
+                        className="w-full h-full object-cover object-top transition-all duration-1000"
+                      />
+                      <div className="absolute bottom-1 right-1 bg-muted-foreground/80 text-white text-[6px] px-1 py-0.5 rounded font-medium">
+                        RESULTS
                       </div>
                     </div>
                   </div>
