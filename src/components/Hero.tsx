@@ -55,14 +55,12 @@ const Hero = () => {
                     <div className="w-full h-6 bg-black rounded-t-[1.5rem] flex items-center justify-center">
                       <div className="w-12 h-1 bg-gray-300 rounded-full"></div>
                     </div>
-                    <div className="p-3 h-full bg-gradient-to-br from-pink-100 to-purple-100">
-                      <div className="text-xs font-semibold mb-2">Email Campaign</div>
-                      <div className="w-full h-16 bg-gradient-to-r from-pink-200 to-purple-200 rounded-lg mb-2"></div>
-                      <div className="space-y-1.5">
-                        <div className="h-1.5 bg-gray-200 rounded"></div>
-                        <div className="h-1.5 bg-gray-200 rounded w-3/4"></div>
-                        <div className="h-1.5 bg-gray-200 rounded w-1/2"></div>
-                      </div>
+                    <div className="h-full bg-black flex items-center justify-center overflow-hidden">
+                      <img 
+                        src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExNjJncWt3dXU4NHI5dm9mbWl1ODQxZmg0NWh2eHN2NzlvbXh1d3pzNiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/exwJuxCcMu3u51mDNi/giphy.gif" 
+                        alt="Email marketing animation"
+                        className="w-full h-full object-cover"
+                      />
                     </div>
                   </div>
                 </div>
