@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 
 const Footer = () => {
   return (
-    <footer className="bg-gradient-to-br from-foreground to-foreground/90 text-background py-12">
+    <footer className="bg-gradient-to-br from-muted via-secondary/20 to-accent/30 py-12">
       <div className="container mx-auto px-4 lg:px-8">
         <div className="flex flex-col items-center space-y-6">
           {/* Brand */}
@@ -16,13 +16,13 @@ const Footer = () => {
           <Button 
             size="lg"
             onClick={() => window.open('https://forms.gle/Vtb4Q2EZhBxg8iKC7', '_blank')}
-            className="bg-secondary hover:bg-secondary/90 text-secondary-foreground font-semibold px-8 py-3 text-lg"
+            className="bg-primary text-primary-foreground hover:bg-primary/90 text-xl px-16 py-6 h-auto font-light border-0"
           >
             Apply For Your Free Audit
           </Button>
           
           {/* Copyright */}
-          <div className="text-background/60 text-sm text-center pt-4 border-t border-background/20 w-full">
+          <div className="text-muted-foreground text-sm text-center pt-4 border-t border-muted-foreground/20 w-full">
             © 2022 Inbox Cash Flow. All rights reserved.
           </div>
         </div>
