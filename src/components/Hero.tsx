@@ -36,7 +36,7 @@ const Hero = () => {
   useEffect(() => {
     const designedInterval = setInterval(() => {
       setCurrentDesignedIndex((prev) => (prev + 1) % portfolioImages.designed.length);
-    }, 1800); // Faster cycling
+    }, 800); // Faster cycling
     return () => clearInterval(designedInterval);
   }, []);
 
@@ -44,7 +44,7 @@ const Hero = () => {
   useEffect(() => {
     const plainInterval = setInterval(() => {
       setCurrentPlainIndex((prev) => (prev + 1) % portfolioImages.plainText.length);
-    }, 2100); // Different timing to avoid sync
+    }, 1100); // Different timing to avoid sync
     return () => clearInterval(plainInterval);
   }, []);
 
@@ -52,7 +52,7 @@ const Hero = () => {
   useEffect(() => {
     const toggleInterval = setInterval(() => {
       setShowDesigned((prev) => !prev);
-    }, 2800); // Faster toggle for more dynamic portfolio showcase
+    }, 1800); // Faster toggle for more dynamic portfolio showcase
     return () => clearInterval(toggleInterval);
   }, []);
 
@@ -60,7 +60,7 @@ const Hero = () => {
   useEffect(() => {
     const leftInterval = setInterval(() => {
       setLeftPhoneIndex((prev) => (prev + 1) % portfolioImages.designed.length);
-    }, 2200); // Unique timing
+    }, 1200); // Unique timing
     return () => clearInterval(leftInterval);
   }, []);
 
@@ -69,7 +69,7 @@ const Hero = () => {
     const rightInterval = setInterval(() => {
       setRightPhoneIndex((prev) => (prev + 1) % 
         (showDesigned ? portfolioImages.designed.length : portfolioImages.plainText.length));
-    }, 2600); // Another unique timing
+    }, 1600); // Another unique timing
     return () => clearInterval(rightInterval);
   }, [showDesigned]);
 
