@@ -25,53 +25,24 @@ const Hero = () => {
     ]
   };
 
-  // State for cycling images with staggered timing
-  const [currentDesignedIndex, setCurrentDesignedIndex] = useState(0);
-  const [currentPlainIndex, setCurrentPlainIndex] = useState(0);
-  const [showDesigned, setShowDesigned] = useState(true);
-  const [leftPhoneIndex, setLeftPhoneIndex] = useState(2);
-  const [rightPhoneIndex, setRightPhoneIndex] = useState(4);
+  // Combine all portfolio images for coordinated cycling
+  const allImages = [
+    ...portfolioImages.designed.map(img => ({ src: img, type: 'designed' })),
+    ...portfolioImages.plainText.map(img => ({ src: img, type: 'plainText' }))
+  ];
 
-  // Main designed emails cycle - faster for more dynamic feel
-  useEffect(() => {
-    const designedInterval = setInterval(() => {
-      setCurrentDesignedIndex((prev) => (prev + 1) % portfolioImages.designed.length);
-    }, 800); // Faster cycling
-    return () => clearInterval(designedInterval);
-  }, []);
+  // State for the two phones with coordinated cycling
+  const [leftPhoneIndex, setLeftPhoneIndex] = useState(0);
+  const [rightPhoneIndex, setRightPhoneIndex] = useState(Math.floor(allImages.length / 2));
 
-  // Plain text emails cycle - offset timing 
+  // Coordinated cycling to ensure phones never show the same image
   useEffect(() => {
-    const plainInterval = setInterval(() => {
-      setCurrentPlainIndex((prev) => (prev + 1) % portfolioImages.plainText.length);
-    }, 1100); // Different timing to avoid sync
-    return () => clearInterval(plainInterval);
-  }, []);
-
-  // Toggle between designed and plain text - faster transitions
-  useEffect(() => {
-    const toggleInterval = setInterval(() => {
-      setShowDesigned((prev) => !prev);
-    }, 1800); // Faster toggle for more dynamic portfolio showcase
-    return () => clearInterval(toggleInterval);
-  }, []);
-
-  // Left phone independent cycling - staggered to avoid simultaneous changes
-  useEffect(() => {
-    const leftInterval = setInterval(() => {
-      setLeftPhoneIndex((prev) => (prev + 1) % portfolioImages.designed.length);
-    }, 1200); // Unique timing
-    return () => clearInterval(leftInterval);
-  }, []);
-
-  // Right phone independent cycling - different offset
-  useEffect(() => {
-    const rightInterval = setInterval(() => {
-      setRightPhoneIndex((prev) => (prev + 1) % 
-        (showDesigned ? portfolioImages.designed.length : portfolioImages.plainText.length));
-    }, 1600); // Another unique timing
-    return () => clearInterval(rightInterval);
-  }, [showDesigned]);
+    const interval = setInterval(() => {
+      setLeftPhoneIndex((prev) => (prev + 1) % allImages.length);
+      setRightPhoneIndex((prev) => (prev + 1) % allImages.length);
+    }, 800); // 80% of a second
+    return () => clearInterval(interval);
+  }, [allImages.length]);
 
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
@@ -115,85 +86,60 @@ const Hero = () => {
             </div>
           </div>
 
-          {/* Right Column - Animated Smartphone Mockups (1/3 width) */}
+          {/* Right Column - Two Larger Smartphone Mockups (1/3 width) */}
           <div className="lg:col-span-1 relative flex justify-center items-center animate-fade-in delay-500">
-            <div className="relative w-full h-[500px] flex items-center justify-center">
-              {/* Phone 1 - Center (Main Portfolio) */}
-              <div className="absolute z-30 animate-[float_6s_ease-in-out_infinite]">
-                <div className="w-48 h-[380px] bg-gradient-to-b from-slate-800 to-slate-900 rounded-[2rem] p-2 shadow-2xl">
-                  <div className="w-full h-full bg-white rounded-[1.5rem] overflow-hidden relative">
-                    <div className="w-full h-6 bg-black rounded-t-[1.5rem] flex items-center justify-center">
-                      <div className="w-12 h-1 bg-gray-300 rounded-full"></div>
+            <div className="relative w-full h-[600px] flex items-center justify-center gap-8">
+              
+              {/* Left Phone - Bigger Size */}
+              <div className="relative z-20 animate-[float_6s_ease-in-out_infinite]">
+                <div className="w-56 h-[450px] bg-gradient-to-b from-slate-800 to-slate-900 rounded-[2.5rem] p-2.5 shadow-2xl transform rotate-6">
+                  <div className="w-full h-full bg-white rounded-[2rem] overflow-hidden relative">
+                    <div className="w-full h-7 bg-black rounded-t-[2rem] flex items-center justify-center">
+                      <div className="w-14 h-1.5 bg-gray-300 rounded-full"></div>
                     </div>
                     <div className="h-full bg-white relative overflow-hidden">
-                      {/* Designed Email Display */}
-                      <div className={`absolute inset-0 transition-opacity duration-700 ${showDesigned ? 'opacity-100' : 'opacity-0'}`}>
-                        <img 
-                          src={portfolioImages.designed[currentDesignedIndex]}
-                          alt="Professional designed email"
-                          className="w-full h-full object-cover object-top"
-                        />
-                        <div className="absolute bottom-2 left-2 bg-primary/90 text-white text-[8px] px-2 py-1 rounded-full font-medium">
-                          DESIGNED EMAIL
-                        </div>
-                      </div>
-                      
-                      {/* Plain Text Email Display */}
-                      <div className={`absolute inset-0 transition-opacity duration-700 ${!showDesigned ? 'opacity-100' : 'opacity-0'}`}>
-                        <img 
-                          src={portfolioImages.plainText[currentPlainIndex]}
-                          alt="High-converting plain text email"
-                          className="w-full h-full object-cover object-top"
-                        />
-                        <div className="absolute bottom-2 left-2 bg-secondary/90 text-white text-[8px] px-2 py-1 rounded-full font-medium">
-                          PLAIN TEXT
-                        </div>
+                      <img 
+                        src={allImages[leftPhoneIndex]?.src}
+                        alt={`${allImages[leftPhoneIndex]?.type === 'designed' ? 'Professional designed' : 'High-converting plain text'} email`}
+                        className="w-full h-full object-cover object-top transition-all duration-500"
+                      />
+                      <div className={`absolute bottom-3 left-3 text-white text-[10px] px-3 py-1.5 rounded-full font-medium ${
+                        allImages[leftPhoneIndex]?.type === 'designed' 
+                          ? 'bg-primary/90' 
+                          : 'bg-secondary/90'
+                      }`}>
+                        {allImages[leftPhoneIndex]?.type === 'designed' ? 'DESIGNED EMAIL' : 'PLAIN TEXT'}
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
 
-              {/* Phone 2 - Left (Independent Portfolio Cycling) */}
-              <div className="absolute -left-12 z-20 animate-[float_6s_ease-in-out_infinite_1s]">
-                <div className="w-40 h-[320px] bg-gradient-to-b from-slate-700 to-slate-800 rounded-[1.5rem] p-1.5 shadow-xl transform rotate-12">
-                  <div className="w-full h-full bg-white rounded-[1rem] overflow-hidden relative">
-                    <div className="w-full h-5 bg-black rounded-t-[1rem]"></div>
+              {/* Right Phone - Bigger Size */}
+              <div className="relative z-20 animate-[float_6s_ease-in-out_infinite_1.5s]">
+                <div className="w-56 h-[450px] bg-gradient-to-b from-slate-700 to-slate-800 rounded-[2.5rem] p-2.5 shadow-2xl transform -rotate-6">
+                  <div className="w-full h-full bg-white rounded-[2rem] overflow-hidden relative">
+                    <div className="w-full h-7 bg-black rounded-t-[2rem] flex items-center justify-center">
+                      <div className="w-14 h-1.5 bg-gray-300 rounded-full"></div>
+                    </div>
                     <div className="h-full bg-white relative overflow-hidden">
                       <img 
-                        src={portfolioImages.designed[leftPhoneIndex]}
-                        alt="Email marketing portfolio"
-                        className="w-full h-full object-cover object-top transition-all duration-600"
+                        src={allImages[rightPhoneIndex]?.src}
+                        alt={`${allImages[rightPhoneIndex]?.type === 'designed' ? 'Professional designed' : 'High-converting plain text'} email`}
+                        className="w-full h-full object-cover object-top transition-all duration-500"
                       />
-                      <div className="absolute bottom-1 left-1 bg-accent/80 text-white text-[6px] px-1 py-0.5 rounded font-medium">
-                        PORTFOLIO
+                      <div className={`absolute bottom-3 right-3 text-white text-[10px] px-3 py-1.5 rounded-full font-medium ${
+                        allImages[rightPhoneIndex]?.type === 'designed' 
+                          ? 'bg-primary/90' 
+                          : 'bg-secondary/90'
+                      }`}>
+                        {allImages[rightPhoneIndex]?.type === 'designed' ? 'DESIGNED EMAIL' : 'PLAIN TEXT'}
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
 
-              {/* Phone 3 - Right (Mixed Portfolio with Independent Timing) */}
-              <div className="absolute -right-12 z-20 animate-[float_6s_ease-in-out_infinite_2s]">
-                <div className="w-40 h-[320px] bg-gradient-to-b from-slate-700 to-slate-800 rounded-[1.5rem] p-1.5 shadow-xl transform -rotate-12">
-                  <div className="w-full h-full bg-white rounded-[1rem] overflow-hidden relative">
-                    <div className="w-full h-5 bg-black rounded-t-[1rem]"></div>
-                    <div className="h-full bg-white relative overflow-hidden">
-                      <img 
-                        src={showDesigned ? 
-                          portfolioImages.designed[rightPhoneIndex % portfolioImages.designed.length] :
-                          portfolioImages.plainText[rightPhoneIndex % portfolioImages.plainText.length]
-                        }
-                        alt="Email marketing showcase"
-                        className="w-full h-full object-cover object-top transition-all duration-600"
-                      />
-                      <div className="absolute bottom-1 right-1 bg-muted-foreground/80 text-white text-[6px] px-1 py-0.5 rounded font-medium">
-                        RESULTS
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
         </div>
