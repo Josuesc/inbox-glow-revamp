@@ -87,7 +87,7 @@ const Hero = () => {
               
               {/* Left Phone (kept exactly as before) */}
               <div className="relative z-20 animate-[float_6s_ease-in-out_infinite]">
-                <div className="w-56 h-[450px] bg-gradient-to-b from-slate-800 to-slate-900 rounded-[2.5rem] p-2.5 shadow-2xl transform rotate-6">
+                <div className="w-64 h-[520px] bg-gradient-to-b from-slate-800 to-slate-900 rounded-[2.5rem] p-2.5 shadow-2xl transform rotate-6">
                   <div className="w-full h-full bg-white rounded-[2rem] overflow-hidden relative">
                     <div className="w-full h-7 bg-black rounded-t-[2rem] flex items-center justify-center">
                       <div className="w-14 h-1.5 bg-gray-300 rounded-full"></div>
