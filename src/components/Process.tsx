@@ -11,7 +11,7 @@ const processSteps = [
   {
     icon: Users,
     title: "List Segmentation",
-    description: "Segment lists into 6 key categories, based on: engagement level, buying frequency, and spending level.",
+    description: "Segment lists into key categories, based on: engagement level, buying frequency, and spending level.",
     step: "02"
   },
   {
@@ -52,14 +52,9 @@ const Process = () => {
       <div className="container mx-auto px-4 lg:px-8 relative z-10">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-black mb-6">
-            Our Process To Achieve{" "}
-            <span className="text-gradient">20%-41%</span>{" "}
-            Of Our Clients' Monthly Revenue
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-black mb-6 text-gradient">
+            Our Process Is Simple
           </h2>
-          <p className="text-xl text-muted-foreground mb-4">
-            Just From Email Marketing—In 90 Days Or Less
-          </p>
           <div className="w-24 h-1 bg-gradient-to-r from-primary to-secondary mx-auto rounded-full"></div>
         </div>
 
@@ -110,17 +105,11 @@ const Process = () => {
 
         {/* CTA */}
         <div className="text-center mt-16">
-          <p className="text-lg text-muted-foreground mb-6">
-            Ready to transform your email marketing?
-          </p>
           <button 
-            onClick={() => {
-              const element = document.getElementById('contact');
-              if (element) element.scrollIntoView({ behavior: 'smooth' });
-            }}
+            onClick={() => window.open('https://forms.gle/Vtb4Q2EZhBxg8iKC7', '_blank')}
             className="bg-gradient-to-r from-primary to-secondary text-white px-8 py-4 rounded-full font-semibold hover:shadow-glow transition-all duration-300 hover:scale-105"
           >
-            Start Your Journey Today
+            Apply For Your Free Audit
           </button>
         </div>
       </div>

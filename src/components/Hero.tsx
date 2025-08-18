@@ -1,14 +1,51 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Mail, TrendingUp } from "lucide-react";
-import heroImage from "@/assets/hero-bg.jpg";
+import { ArrowRight } from "lucide-react";
+import { useState, useEffect } from "react";
 
 const Hero = () => {
-  const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
+  // Portfolio images
+  const portfolioImages = {
+    designed: [
+      "/lovable-uploads/9e9e9113-ab3b-4ae3-9c5f-c625939eb71c.png", // IOKA skincare 1
+      "/lovable-uploads/cbcb37cf-8cc7-4740-9f5d-7ce2c9378bd1.png", // IOKA skincare 2
+      "/lovable-uploads/a982e324-4b12-46cf-9713-e2444ef19667.png", // JYM supplement 1
+      "/lovable-uploads/bbb00f58-a653-4d38-ab02-0632a651310d.png", // JYM supplement 2
+      "/lovable-uploads/1b09f454-388f-4fd4-a0cf-1adc1fce40f0.png", // WRAP LIFE 1
+      "/lovable-uploads/fb68086e-5820-4b6d-81d9-5f04df5d72f1.png", // WRAP LIFE 2
+      "/lovable-uploads/78b53fcb-608b-4b6c-8a0f-397af1a78152.png"  // WRAP LIFE 3
+    ],
+    plainText: [
+      "/lovable-uploads/34389f9a-3ca5-41e5-83f8-a1e3ac0f2deb.png", // BEDJET
+      "/lovable-uploads/cdd9a44c-8aa4-4a90-b974-6dfe4911ab4c.png", // NB Pure
+      "/lovable-uploads/0f9e15be-b7d1-4e7e-af3d-48aa3434019c.png", // Northern Fir
+      "/lovable-uploads/3a01ab99-d23f-41bd-a815-0bab6c9dfda2.png", // IOKA Eye Care
+      "/lovable-uploads/c4a143a4-2f5c-48f4-bb1c-f1eadfddc878.png", // SBTRCT Skincare
+      "/lovable-uploads/97b63913-15bc-408f-adb0-8b89835ea177.png"  // Terra & Co
+    ]
   };
+
+  // Create an alternating DE-PT sequence
+  const allImages = [];
+  const maxLength = Math.max(portfolioImages.designed.length, portfolioImages.plainText.length);
+  for (let i = 0; i < maxLength; i++) {
+    if (i < portfolioImages.designed.length) {
+      allImages.push({ src: portfolioImages.designed[i], type: "designed" });
+    }
+    if (i < portfolioImages.plainText.length) {
+      allImages.push({ src: portfolioImages.plainText[i], type: "plainText" });
+    }
+  }
+
+  // State for cycling images
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  // Cycle images every 0.8 seconds
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((prev) => (prev + 1) % allImages.length);
+    }, 600);
+    return () => clearInterval(interval);
+  }, [allImages.length]);
 
   return (
     <section 
@@ -16,9 +53,9 @@ const Hero = () => {
     >
       <div className="container mx-auto px-4 lg:px-8 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-center max-w-7xl mx-auto">
-          {/* Left Column - Text Content (2/3 width) */}
-          <div className="lg:col-span-2 text-left pr-8">
-            {/* Main Headline */}
+          
+          {/* Left Column - Text */}
+          <div className="lg:col-span-2 text-left pr-16">
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-light mb-8 animate-fade-in leading-tight">
               <span className="text-foreground">Helping </span>
               <span className="text-primary font-medium">DTC Brands</span>
@@ -28,15 +65,14 @@ const Hero = () => {
               <span className="text-foreground italic underline decoration-1 underline-offset-4">Email Marketing</span>
             </h1>
             
-            <h2 className="text-xl md:text-2xl lg:text-3xl font-light mb-12 animate-fade-in text-muted-foreground delay-300 leading-relaxed max-w-4xl">
+            <h2 className="text-lg md:text-xl lg:text-2xl font-light mb-12 animate-fade-in text-muted-foreground delay-300 leading-relaxed max-w-xl">
               Acquire New Customers <span className="text-secondary font-medium">PROFITABLY</span> Upfront... Then Keep Them Spending (Not Just One Purchase and Done) With Our <span className="text-accent font-medium">'Anti-Playbook'</span> Email Marketing&nbsp;System.
             </h2>
 
-            {/* CTA Button */}
             <div className="animate-scale-in delay-1000">
               <Button 
                 size="lg"
-                onClick={() => scrollToSection('contact')}
+                onClick={() => window.open('https://forms.gle/Vtb4Q2EZhBxg8iKC7', '_blank')}
                 className="bg-primary text-primary-foreground hover:bg-primary/90 text-xl px-16 py-6 h-auto font-light border-0"
               >
                 Apply For Your Free Audit
@@ -45,62 +81,35 @@ const Hero = () => {
             </div>
           </div>
 
-          {/* Right Column - Animated Smartphone Mockups (1/3 width) */}
+          {/* Right Column - Single Smartphone Mockup */}
           <div className="lg:col-span-1 relative flex justify-center items-center animate-fade-in delay-500">
-            <div className="relative w-full h-[500px] flex items-center justify-center">
-              {/* Phone 1 - Front Center */}
-              <div className="absolute z-30 animate-[float_6s_ease-in-out_infinite]">
-                <div className="w-48 h-[380px] bg-gradient-to-b from-slate-800 to-slate-900 rounded-[2rem] p-2 shadow-2xl">
-                  <div className="w-full h-full bg-white rounded-[1.5rem] overflow-hidden">
-                    <div className="w-full h-6 bg-black rounded-t-[1.5rem] flex items-center justify-center">
-                      <div className="w-12 h-1 bg-gray-300 rounded-full"></div>
+            <div className="relative w-full h-[600px] flex items-center justify-center">
+              
+              {/* Left Phone (kept exactly as before) */}
+              <div className="relative z-20 animate-[float_6s_ease-in-out_infinite]">
+                <div className="w-64 h-[520px] bg-gradient-to-b from-slate-800 to-slate-900 rounded-[2.5rem] p-2.5 shadow-2xl transform rotate-6">
+                  <div className="w-full h-full bg-white rounded-[2rem] overflow-hidden relative">
+                    <div className="w-full h-7 bg-black rounded-t-[2rem] flex items-center justify-center">
+                      <div className="w-14 h-1.5 bg-gray-300 rounded-full"></div>
                     </div>
-                    <div className="p-3 h-full bg-gradient-to-br from-pink-100 to-purple-100">
-                      <div className="text-xs font-semibold mb-2">Email Campaign</div>
-                      <div className="w-full h-16 bg-gradient-to-r from-pink-200 to-purple-200 rounded-lg mb-2"></div>
-                      <div className="space-y-1.5">
-                        <div className="h-1.5 bg-gray-200 rounded"></div>
-                        <div className="h-1.5 bg-gray-200 rounded w-3/4"></div>
-                        <div className="h-1.5 bg-gray-200 rounded w-1/2"></div>
+                    <div className="h-full bg-white relative overflow-hidden">
+                      <img 
+                        src={allImages[currentIndex]?.src}
+                        alt={`${allImages[currentIndex]?.type === 'designed' ? 'Professional designed' : 'High-converting plain text'} email`}
+                        className="w-full h-full object-cover object-top transition-all duration-500"
+                      />
+                      <div className={`absolute bottom-3 left-3 text-white text-[10px] px-3 py-1.5 rounded-full font-medium ${
+                        allImages[currentIndex]?.type === 'designed' 
+                          ? 'bg-primary/90' 
+                          : 'bg-secondary/90'
+                      }`}>
+                        {allImages[currentIndex]?.type === 'designed' ? 'DESIGNED EMAIL' : 'PLAIN TEXT'}
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
 
-              {/* Phone 2 - Left Back */}
-              <div className="absolute -left-12 z-20 animate-[float_6s_ease-in-out_infinite_1s]">
-                <div className="w-40 h-[320px] bg-gradient-to-b from-slate-700 to-slate-800 rounded-[1.5rem] p-1.5 shadow-xl transform rotate-12">
-                  <div className="w-full h-full bg-white rounded-[1rem] overflow-hidden">
-                    <div className="w-full h-5 bg-black rounded-t-[1rem]"></div>
-                    <div className="p-2 h-full bg-gradient-to-br from-blue-100 to-indigo-100">
-                      <div className="text-[10px] font-semibold mb-1">Newsletter</div>
-                      <div className="w-full h-12 bg-gradient-to-r from-blue-200 to-indigo-200 rounded mb-1"></div>
-                      <div className="space-y-1">
-                        <div className="h-1 bg-gray-200 rounded"></div>
-                        <div className="h-1 bg-gray-200 rounded w-2/3"></div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              {/* Phone 3 - Right Back */}
-              <div className="absolute -right-12 z-20 animate-[float_6s_ease-in-out_infinite_2s]">
-                <div className="w-40 h-[320px] bg-gradient-to-b from-slate-700 to-slate-800 rounded-[1.5rem] p-1.5 shadow-xl transform -rotate-12">
-                  <div className="w-full h-full bg-white rounded-[1rem] overflow-hidden">
-                    <div className="w-full h-5 bg-black rounded-t-[1rem]"></div>
-                    <div className="p-2 h-full bg-gradient-to-br from-emerald-100 to-teal-100">
-                      <div className="text-[10px] font-semibold mb-1">Promotion</div>
-                      <div className="w-full h-12 bg-gradient-to-r from-emerald-200 to-teal-200 rounded mb-1"></div>
-                      <div className="space-y-1">
-                        <div className="h-1 bg-gray-200 rounded"></div>
-                        <div className="h-1 bg-gray-200 rounded w-3/4"></div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
         </div>

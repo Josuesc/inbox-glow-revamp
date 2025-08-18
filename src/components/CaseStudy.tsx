@@ -52,7 +52,7 @@ const CaseStudy = () => {
             <div className="p-8 lg:p-12">
               <div className="mb-8">
                 <h3 className="text-2xl font-bold mb-4">
-                  From $7k/month to $30k/month in 90 days!
+                  From $7k/month to $30k/month!
                 </h3>
                 <p className="text-muted-foreground leading-relaxed">
                   A hair accessories brand struggling with email performance transformed their revenue 
@@ -107,7 +107,7 @@ const CaseStudy = () => {
                       <span className="font-semibold text-green-600">$30k/month</span>
                     </div>
                     <p className="text-xs text-green-600 mt-2">
-                      328% increase in 90 days
+                      328% increase
                     </p>
                   </div>
                 </div>
@@ -120,8 +120,8 @@ const CaseStudy = () => {
                   <div className="text-xs text-green-700">Revenue Growth</div>
                 </div>
                 <div className="text-center p-4 bg-gradient-to-br from-blue-50 to-cyan-50 rounded-lg border border-blue-200">
-                  <div className="text-2xl font-bold text-blue-600">90</div>
-                  <div className="text-xs text-blue-700">Days to Results</div>
+                  <div className="text-2xl font-bold text-blue-600">Fast</div>
+                  <div className="text-xs text-blue-700">Results</div>
                 </div>
                 <div className="text-center p-4 bg-gradient-to-br from-purple-50 to-pink-50 rounded-lg border border-purple-200">
                   <div className="text-2xl font-bold text-purple-600">$23k</div>
@@ -153,7 +153,7 @@ const CaseStudy = () => {
             <h3 className="font-bold text-lg mb-2">Average ROI</h3>
             <div className="text-3xl font-black text-gradient mb-2">1,200%</div>
             <p className="text-sm text-muted-foreground">
-              Return on investment within 90 days
+              Return on investment
             </p>
           </Card>
 
@@ -173,9 +173,9 @@ const CaseStudy = () => {
               <DollarSign className="w-8 h-8 text-purple-600" />
             </div>
             <h3 className="font-bold text-lg mb-2">Time to Results</h3>
-            <div className="text-3xl font-black text-gradient mb-2">90</div>
+            <div className="text-3xl font-black text-gradient mb-2">Fast</div>
             <p className="text-sm text-muted-foreground">
-              Days or less to see significant improvement
+              Quick significant improvement
             </p>
           </Card>
         </div>
