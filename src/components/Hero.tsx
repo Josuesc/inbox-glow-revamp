@@ -69,7 +69,7 @@ const Hero = () => {
               Acquire New Customers <span className="text-secondary font-medium">PROFITABLY</span> Upfront... Then Keep Them Spending (Not Just One Purchase and Done) With Our <span className="text-accent font-medium">'Anti-Playbook'</span> Email Marketing&nbsp;System.
             </h2>
 
-            <div className="animate-scale-in delay-1000">
+            <div className="animate-scale-in delay-1000 flex justify-center lg:justify-start">
               <Button 
                 size="lg"
                 onClick={() => window.open('https://forms.gle/Vtb4Q2EZhBxg8iKC7', '_blank')}
