@@ -49,14 +49,14 @@ const Hero = () => {
 
   return (
     <section 
-      className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-muted via-secondary/30 to-accent/50"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-muted via-secondary/30 to-accent/50 pt-20 lg:pt-0"
     >
       <div className="container mx-auto px-4 lg:px-8 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-center max-w-7xl mx-auto">
           
           {/* Left Column - Text */}
-          <div className="lg:col-span-2 text-left pr-16">
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-light mb-8 animate-fade-in leading-tight">
+          <div className="lg:col-span-2 text-left lg:pr-16">
+            <h1 className="text-3xl md:text-6xl lg:text-7xl font-light mb-6 md:mb-8 animate-fade-in leading-tight">
               <span className="text-foreground">Helping </span>
               <span className="text-primary font-medium">DTC Brands</span>
               <span className="text-foreground"> Scale Through </span>
@@ -69,7 +69,7 @@ const Hero = () => {
               Acquire New Customers <span className="text-secondary font-medium">PROFITABLY</span> Upfront... Then Keep Them Spending (Not Just One Purchase and Done) With Our <span className="text-accent font-medium">'Anti-Playbook'</span> Email Marketing&nbsp;System.
             </h2>
 
-            <div className="animate-scale-in delay-1000">
+            <div className="animate-scale-in delay-1000 flex justify-center lg:justify-start">
               <Button 
                 size="lg"
                 onClick={() => window.open('https://forms.gle/Vtb4Q2EZhBxg8iKC7', '_blank')}
