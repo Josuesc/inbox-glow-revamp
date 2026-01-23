@@ -61,7 +61,7 @@ const Header = () => {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="lg:hidden absolute top-full left-0 right-0 glass-effect border-b">
+          <div className="lg:hidden absolute top-full left-0 right-0 z-50 border-b bg-background/95 backdrop-blur-md shadow-card">
             <nav className="flex flex-col space-y-4 p-4">
               <button 
                 onClick={() => scrollToSection('testimonials')}
